@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Task Manager</h1>
+
+    <div class="task-list">
+      <ul id="task-list">
+        <!-- Task list items will be dynamically generated here -->
+      </ul>
+    </div>
+
+    <div class="task-form">
+      <h2>Add New Task</h2>
+      <form id="add-task-form">
+        <div>
+          <label for="task-title">Title:</label>
+          <input type="text" id="task-title" required>
+        </div>
+        <div>
+          <label for="task-description">Description:</label>
+          <textarea id="task-description"></textarea>
+        </div>
+        <div>
+          <label for="task-due-date">Due Date:</label>
+          <input type="date" id="task-due-date" required>
+        </div>
+        <button type="submit">Add Task</button>
+      </form>
+      <div class="color-picker-container">
+        <input type="color" id="colorPicker">
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

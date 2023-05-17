@@ -1,0 +1,143 @@
+:root {
+  --task-color: #9b59b6;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to  right, #1abc9c, var(--task-color));
+  padding: 10px;
+}
+
+/* Container styles */
+.container {
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color:  rgba(255, 255, 255, 0.9);;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Heading styles */
+h1 {
+  color: #333;
+  font-family: "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  color: #666;
+  font-family: "Verdana", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+/* Task List styles */
+.task-list {
+  margin-bottom: 20px;
+  
+}
+
+/* Task item styles */
+.task-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid var(--task-color);
+  border-radius: 5px;
+  color: #333;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #eaf6fa;
+  list-style: none;
+}
+
+.task-item.completed {
+  background-color: #f0f0f0;
+}
+
+/* Form styles */
+.task-form {
+  margin-bottom: 20px;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+/* Input field styles */
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+  border-color: var(--task-color);
+  box-shadow: 0 0 5px var(--task-color);
+  outline: none;
+}
+
+/* Label styles */
+label {
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+/* Label styles when input is focused */
+input[type="text"]:focus + label,
+textarea:focus + label,
+input[type="text"]:focus-within + label,
+textarea:focus-within + label {
+  color: var(--task-color);
+}
+
+
+input[type="text"],
+textarea,
+input[type="date"] {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+input[type="text"],
+textarea {
+  color: #333;
+  font-family: "Arial", sans-serif;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  background-color: var(--task-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.color-picker-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.color-picker-container label {
+  margin-right: 5px;
+}
+/* Animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease-in;
+}
